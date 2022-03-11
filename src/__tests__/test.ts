@@ -1,5 +1,6 @@
 import PostilAPI from '../index';
 
-test('listCities', () => {
-  expect(PostilAPI.listCities()).toStrictEqual(["חיפה", "תל אביב"]);
+test('listCities', async () => {
+  let cities = await PostilAPI.listCities();
+  expect(cities).toStrictEqual(["חיפה", "תל אביב"]);
 });
